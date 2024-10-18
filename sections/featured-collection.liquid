@@ -5,13 +5,19 @@
   </h2>
   <div class="swimlane hidden-scroll md:scroll-px-8 md:px-8 md:pb-8 lg:scroll-px-12 lg:px-12">
     {%- for product in collections[section.settings.collection].products limit: section.settings.products_to_show -%}
-      <div class="w-80 animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}">
-        {%- render 'card-product', card_product: product, wrapper_class: 'w-80' -%}
+      <div class="w-80">
+        <div class="animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}">
+          <!-- Aquí se renderiza la tarjeta del producto con la animación en la imagen -->
+          {%- render 'card-product', card_product: product, wrapper_class: 'w-80' -%}
+        </div>
       </div>
     {%- else -%}
       {%- for i in (1..4) -%}
-        <div class="w-80 animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}">
-          {% render 'card-product', wrapper_class: 'w-80' %}
+        <div class="w-80">
+          <div class="animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}">
+            <!-- Producto de relleno -->
+            {% render 'card-product', wrapper_class: 'w-80' %}
+          </div>
         </div>
       {%- endfor -%}
     {%- endfor -%}
