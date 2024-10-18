@@ -69,12 +69,19 @@
           "settings": {
             "collection": ""
           }
+        },
+        "featured_collection_VHN3DU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
         }
       },
       "block_order": [
         "featured-collection-0",
         "featured-collection-1",
-        "featured-collection-2"
+        "featured-collection-2",
+        "featured_collection_VHN3DU"
       ],
       "settings": {
         "title": "Collections",
