@@ -94,12 +94,22 @@
       "settings": {
         "animation_type": "animate__zoomIn"
       }
+    },
+    "featured_collection_JeTjR9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "frontpage",
+        "products_to_show": 5,
+        "animation_type": "animate__zoomIn"
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "collection_list",
-    "featured_product_qWrWe6"
+    "featured_product_qWrWe6",
+    "featured_collection_JeTjR9"
   ]
 }
