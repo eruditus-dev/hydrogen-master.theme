@@ -47,7 +47,7 @@
         "title": "Featured products",
         "collection": "frontpage",
         "products_to_show": 8,
-        "animation_type": "animate__bounce"
+        "animation_type": "animate__zoomIn"
       }
     },
     "collection_list": {
