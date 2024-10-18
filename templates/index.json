@@ -101,7 +101,7 @@
         "title": "Featured collection",
         "collection": "frontpage",
         "products_to_show": 5,
-        "animation_type": "animate__zoomIn"
+        "animation_type": "animate__slideInUp"
       }
     }
   },
