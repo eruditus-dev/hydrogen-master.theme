@@ -1,0 +1,33 @@
+<!-- Comienzo del archivo de la sección -->
+<div class="animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}">
+  <!-- Contenido de la sección, como productos destacados -->
+  <h2>Productos Destacados</h2>
+  <!-- Más código HTML o Liquid para mostrar los productos -->
+</div>
+
+{% schema %}
+{
+  "name": "Productos destacados",
+  "settings": [
+    {
+      "type": "select",
+      "id": "animation_type",
+      "label": "Tipo de Animación",
+      "options": [
+        { "value": "animate__fadeIn", "label": "Fade In" },
+        { "value": "animate__bounce", "label": "Bounce" },
+        { "value": "animate__zoomIn", "label": "Zoom In" },
+        { "value": "animate__slideInUp", "label": "Slide In Up" },
+        { "value": "none", "label": "Sin Animación" }
+      ],
+      "default": "none"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Animación de productos destacados",
+      "category": "Productos"
+    }
+  ]
+}
+{% endschema %}
