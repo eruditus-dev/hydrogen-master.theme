@@ -42,11 +42,28 @@
       "min": 5,
       "max": 15,
       "step": 1
+    },
+    {
+      "type": "select",
+      "id": "animation_type",
+      "label": "Tipo de Animación",
+      "options": [
+        { "value": "animate__fadeIn", "label": "Fade In" },
+        { "value": "animate__bounce", "label": "Bounce" },
+        { "value": "animate__zoomIn", "label": "Zoom In" },
+        { "value": "animate__slideInUp", "label": "Slide In Up" },
+        { "value": "none", "label": "Sin Animación" }
+      ],
+      "default": "none"
     }
   ],
   "presets": [
     {
       "name": "Featured collection"
+    },
+    {
+      "name": "Animación de productos destacados",
+      "category": "Productos"
     }
   ]
 }
