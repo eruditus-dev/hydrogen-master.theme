@@ -1,21 +1,16 @@
-<!-- Comienzo del archivo de la sección -->
+<!-- HTML / Liquid de tu sección -->
 <div class="animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}">
-  <!-- Contenido de la sección, como productos destacados -->
-  <h2>Productos Destacados</h2>
-  <!-- Más código HTML o Liquid para mostrar los productos -->
-</div>
-<div class="grid w-full gap-4 py-6 md:gap-8 md:py-8 lg:py-12">
-  <h2 class="px-6 font-heading text-lead font-heading-weight md:px-8 lg:px-12">
-    {{ section.settings.title | escape }}
-  </h2>
-  <div class="swimlane hidden-scroll md:scroll-px-8 md:px-8 md:pb-8 lg:scroll-px-12 lg:px-12">
-    {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-      {%- render 'card-product', card_product: product, wrapper_class: 'w-80' -%}
-    {%- else -%}
-      {%- for i in (1..4) -%}
-        {% render 'card-product', wrapper_class: 'w-80' %}
-      {%- endfor -%}
-    {%- endfor -%}
+  <!-- Contenido de la sección (colección de productos) -->
+  <h2>{{ section.settings.title }}</h2>
+
+  <div class="collection-products">
+    <!-- Código para mostrar productos de la colección seleccionada -->
+    {% for product in collections[section.settings.collection].products limit: section.settings.products_to_show %}
+      <div class="product-item">
+        <!-- Aquí va el contenido de cada producto (imagen, título, etc.) -->
+        {{ product.title }}
+      </div>
+    {% endfor %}
   </div>
 </div>
 
@@ -59,11 +54,8 @@
   ],
   "presets": [
     {
-      "name": "Featured collection"
-    },
-    {
-      "name": "Animación de productos destacados",
-      "category": "Productos"
+      "name": "Featured collection",
+      "category": "Products"
     }
   ]
 }
