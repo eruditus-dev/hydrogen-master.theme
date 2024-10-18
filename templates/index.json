@@ -87,11 +87,18 @@
         "title": "Collections",
         "columns_desktop": 4
       }
+    },
+    "featured_product_qWrWe6": {
+      "type": "featured-product",
+      "settings": {
+        "animation_type": "animate__zoomIn"
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "collection_list"
+    "collection_list",
+    "featured_product_qWrWe6"
   ]
 }
