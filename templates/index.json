@@ -46,7 +46,8 @@
       "settings": {
         "title": "Featured products",
         "collection": "all",
-        "products_to_show": 8
+        "products_to_show": 8,
+        "animation_type": "animate__slideInUp"
       }
     },
     "collection_list": {
