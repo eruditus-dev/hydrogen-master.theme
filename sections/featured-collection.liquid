@@ -6,18 +6,24 @@
   <div class="swimlane hidden-scroll md:scroll-px-8 md:px-8 md:pb-8 lg:scroll-px-12 lg:px-12">
     {%- for product in collections[section.settings.collection].products limit: section.settings.products_to_show -%}
       <div class="w-80">
-        <div class="animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}">
-          <!-- Aquí se renderiza la tarjeta del producto con la animación en la imagen -->
-          {%- render 'card-product', card_product: product, wrapper_class: 'w-80' -%}
-        </div>
+        <!-- Aquí aplicamos la animación solo a la imagen del producto -->
+        <img
+          class="animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}"
+          src="{{ product.featured_image | img_url: '500x500' }}"
+          alt="{{ product.title }}"
+        >
+        <!-- Aquí se renderiza el resto de la tarjeta del producto, sin animación -->
+        {%- render 'card-product', card_product: product, wrapper_class: 'w-80' -%}
       </div>
     {%- else -%}
       {%- for i in (1..4) -%}
         <div class="w-80">
-          <div class="animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}">
-            <!-- Producto de relleno -->
-            {% render 'card-product', wrapper_class: 'w-80' %}
-          </div>
+          <img
+            class="animate__animated {% if section.settings.animation_type != 'none' %}{{ section.settings.animation_type }}{% endif %}"
+            src="{{ 'default_image_url' | img_url: '500x500' }}"
+            alt="Producto de ejemplo"
+          >
+          {%- render 'card-product', wrapper_class: 'w-80' %}
         </div>
       {%- endfor -%}
     {%- endfor -%}
