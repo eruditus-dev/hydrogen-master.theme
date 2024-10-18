@@ -45,9 +45,9 @@
       "type": "featured-collection",
       "settings": {
         "title": "Featured products",
-        "collection": "all",
+        "collection": "frontpage",
         "products_to_show": 8,
-        "animation_type": "animate__slideInUp"
+        "animation_type": "animate__zoomIn"
       }
     },
     "collection_list": {
